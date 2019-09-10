@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <style>
+        body {
+            color: rgb(4, 4, 83);
+            background-image: url('https://i.dawn.com/primary/2019/02/5c66a2f34ba9b.jpg')
+        }
+        
+        h1 {
+            color: rgb(2, 14, 2);
+        }
+        
+        p {
+            color: #971081e8
+        }
+    </style>
+    <center>
+        <h2>Admin Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <table>{{ form.as_table}}</table>
+            <input type="submit" value="login">
+        </form>
+    </center>
+</head>
+
+<body>

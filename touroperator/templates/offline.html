@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<style>
+    h5 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #2b700a;
+    }
+    
+    body {
+        color: rgb(0, 0, 0);
+    }
+    
+    th {
+        background-color: deepskyblue
+    }
+    
+    td {
+        background-color: aliceblue
+    }
+    
+    body {
+        background-image: url("https://wallpapersite.com/images/pages/pic_w/18144.jpg");
+        font-size: 5mm;
+        background-repeat: no-repeat;
+        background-size: 1299px 640px;
+    }
+</style>
+
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Offline </title>
+    </head>
+</body>
+
+
+<body>
+    <br>
+    <center>
+        <h2>Offline Booked Members</h2>
+        <style>
+            a {
+                color: rgb(0, 28, 185);
+            }
+        </style>
+
+        <table border=4>
+            <tr>
+                <th>Sr.no</th>
+                <th>Date</th>
+                <th>Visitorname</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Timeslot</th>
+                <th>email_id</th>
+                <th>Mobile_number</th>
+
+
+            </tr>
+            {% for emp in form %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{emp.Date}}</td>
+                <td>
+                    <a href="/multy/{{emp.id}}">{{emp.Vistorname}}</a></td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.TimeSlot}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.phone_no}}</td>
+
+
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+
+</html>

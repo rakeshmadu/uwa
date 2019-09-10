@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<style>
+    h5 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #2b700a;
+    }
+    
+    body {
+        color: rgb(0, 0, 0);
+    }
+    
+    th {
+        background-color: deepskyblue
+    }
+    
+    td {
+        background-color: aliceblue
+    }
+    
+    body {
+        background-image: url("https://wallpapersite.com/images/pages/pic_w/18145.jpg");
+        font-size: 4mm;
+        background-repeat: no-repeat;
+        background-size: 1299px 640px;
+    }
+</style>
+<br>
+<center>
+    <h1>Online Booked members</h1>
+</center>
+<br>
+
+<body>
+    <table align="center" border="2">
+        <thead>
+            <th>Name</th>
+            <th>Register_Id</th>
+            <th>vehicle_no</th>
+            <th>Date</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>No_Of_Tickets</th>
+            <th>Cost</th>
+            <th>Status</th>
+            <th>Parks_Names</th>
+
+        </thead>
+        {%for x in all%}
+        <tbody>
+            <td>
+                <center><a href="/invid/{{x.id}}">{{x.name}}</center>
+            </td>
+            <td>
+                <center>{{x.reg_id}}</center>
+            </td>
+            <td>
+                <center>{{x.vehicle_no}}</center>
+            </td>
+            <td>
+                <center>{{x.date}}</center>
+            </td>
+            <td>
+                <center>{{x.country}}</center>
+            </td>
+            <td>
+                <center>{{x.state}}</center>
+            </td>
+            <td>
+                <center>{{x.city}}</center>
+            </td>
+            <td>
+                <center>{{x.total}}</center>
+            </td>
+            <td>
+                <center>{{x.cost}}</center>
+            </td>
+            <td>
+                <center>{{x.status}}</center>
+            </td>
+            <td>
+                <center>{{x.parks_names}}</center>
+            </td>
+
+        </tbody>
+        {%endfor%}
+    </table>
+    <!-- <a href="/userhome/"><center>Back</center></a> -->
+</body>
+
+</html>

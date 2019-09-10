@@ -1,0 +1,106 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<head>
+    <style>
+        body {
+            font-style: normal;
+            color: black;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: auto;
+            font-size: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        body {
+            background-image: url("https://wallpapersite.com/images/pages/pic_w/9439.jpg");
+            background-repeat: no-repeat;
+            background-size: 1299px 640px;
+        }
+        
+        thead:hover {
+            border: 5px solid rgb(83, 128, 0);
+        }
+        
+        thead {
+            color: rgb(66, 1, 66);
+            font-style: bold;
+            font-size: 20px;
+            background-color: dodgerblue;
+        }
+        
+        td {
+            background-color: aquamarine
+        }
+        
+        h3 {
+            color: rgb(22, 54, 0);
+        }
+    </style>
+</head>
+
+<h3>Previous bookings</h3>
+
+<body>
+    <table align="center" border="2">
+        <thead>
+            <th>Name</th>
+            <th>Register_Id</th>
+            <th>vehicle_no</th>
+            <th>Date</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>No_Of_Tickets</th>
+            <th>Cost</th>
+            <th>Status</th>
+            <th>Parks_Names</th>
+
+        </thead>
+        {%for x in name%}
+        <tbody>
+            <td>
+                <center>{{x.name}}</center>
+            </td>
+            <td>
+                <center>{{x.reg_id}}</center>
+            </td>
+            <td>
+                <center>{{x.vehicle_no}}</center>
+            </td>
+            <td>{{x.date}}</td>
+            <td>
+                <center>{{x.country}}</center>
+            </td>
+            <td>
+                <center>{{x.state}}</center>
+            </td>
+            <td>
+                <center>{{x.city}}</center>
+            </td>
+            <td>
+                <center>{{x.total}}</center>
+            </td>
+            <td>
+                <center>{{x.cost}}</center>
+            </td>
+            <td>
+                <center>{{x.status}}</center>
+            </td>
+            <td>
+                <center>{{x.parks_names}}</center>
+            </td>
+
+        </tbody>
+        {%endfor%}
+    </table>
+    <a href="/userhome/">
+        <center>Back</center>
+    </a>
+</body>
+
+</html>

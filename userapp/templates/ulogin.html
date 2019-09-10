@@ -1,0 +1,65 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<head>
+    <style>
+        body {
+            background: url("https://downloader.la/temp/5d71e3d7c0843.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: auto;
+        }
+        
+        #vini {
+            border-radius: 25px;
+            height: 50px;
+            width: 100px;
+            font-size: 1.5em;
+            font-style: initial;
+            color: blue;
+            cursor: pointer;
+            font-style: bold;
+        }
+        
+        h1 {
+            color: orangered;
+        }
+        
+        table {
+            color: rgb(2, 11, 41);
+            font-size: 20px;
+        }
+        
+        body {
+            background-image: url("https://wallpapersite.com/images/pages/pic_w/2264.jpg");
+            background-repeat: no-repeat;
+            background-size: 1299px 640px;
+            background-position: 0px 10;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST">
+        <br>
+        <h1>
+            <center>login page</center>
+        </h1>
+        {% csrf_token %}
+        <center>
+            <table>
+                <table>{{form.as_table}}</table>
+                <br>
+                <input id="vini" type='submit' value='login'>
+
+            </table>
+        </center>
+        <p>
+
+        </p>
+    </form>
+</body>
+
+</html>
